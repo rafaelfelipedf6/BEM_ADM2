@@ -52,6 +52,46 @@
 #page_wrapper{
 	margin:10px;
 }
+#page_wrapper form{
+	background:#EEE;
+	padding:15px;
+	border:1px;
+	margin:10px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+#page_wrapper form input{
+	padding:5px 20px;
+}
+#page_wrapper form a{
+	text-decoration:none;
+	color:#666;
+	margin-left:10px;
+}
+#page_wrapper form a:hover{
+	color:#333;
+	
+}
+.alert{
+	color:#F00;
+	margin-left:15px;
+}
+.notice{
+	color:#14ad0f;
+	margin-left:15px;
+}
+#text_home p{
+	text-indent:20px;
+	margin:10px;
+}
+#text_home a{
+	color:#F00;
+	text-decoration:none;
+}
+#text_home a:hover{
+	color:#000;
+}
 #footer{
 	position:absolute;
 	bottom:0px;
