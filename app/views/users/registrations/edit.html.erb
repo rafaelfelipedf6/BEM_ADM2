@@ -4,6 +4,35 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome, autofocus: true%>
+  </div>
+
+  <div class="field">
+    <%= f.label :cpf %><br />
+    <%= f.text_field :cpf%>
+  </div>
+  <div class="field">
+    <%= f.label :telefone %><br />
+    <%= f.telephone_field :telefone%>
+  </div>
+  <div class="field">
+    <%= f.label :entrada %><br />
+    <%= f.date_field :entrada%>
+  </div>
+  <div class="field">
+    <%= f.label :salario %><br />
+    <%= f.number_field :salario%>
+  </div>
+  <div class="field">
+    <%= f.label :cargo %><br />
+    <%= f.radio_button :cargo, "admin" %>
+    <%= f.label :cargo, "Gerente", :value => "admin"  %>
+    <br />
+    <%= f.radio_button :cargo, "vend" %>
+    <%= f.label :cargo, "Vendedor", :value => "vend" %>
+  </div>
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email %>
   </div>

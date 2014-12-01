@@ -11,7 +11,7 @@
 			<div class="menu_top">
 				<ul>
 				<% if user_signed_in? %>
-				  <li>Autenticado como <strong><%= current_user.email%></strong>.</li>
+				  <li>Autenticado como <strong><%= current_user.cargo%></strong>.</li>
 					
 					  <li><%= link_to "Home", root_path, :class => 'navbar-link'  %></li>
 					  <li><%= link_to 'Editar Perfil', edit_user_registration_url, :class => 'navbar-link' %></li>
@@ -36,11 +36,14 @@
 		<div id="pager"></div>
 	</div> -->
 
-    <div id="content">         <p class="notice"><%= notice %></p>         <p
-class="alert"><%= alert %></p>         <div id="page_wrapper">         <%=
-yield %>         </div>
-    	
-    </div>
+    <div id="content">         
+    	<p class="notice"><%= notice %></p>         
+    	<p class="alert"><%= alert %></p>         
+    	<div id="page_wrapper">         
+    		<%=yield %>         
+    	</div>
+   	</div>
+    <div class="clear"></div>
     <div id="footer">
     	<p style="text-align:center;color:#888;">Brito e Mendonça - Ltda ME &copy;- Todos os direitos reservados</p>
     </div>

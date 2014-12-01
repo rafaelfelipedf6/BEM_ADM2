@@ -27,6 +27,13 @@ ActiveRecord::Schema.define(version: 20141126204859) do
   end
 
   create_table "users", force: true do |t|
+    t.string   "nome"
+    t.string   "cpf"
+    t.string   "telefone"
+    t.string   "celular"
+    t.string   "cargo"
+    t.date     "entrada"
+    t.date     "salario"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
