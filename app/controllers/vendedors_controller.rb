@@ -29,7 +29,7 @@ class VendedorsController < ApplicationController
 
     respond_to do |format|
       if @vendedor.save
-        format.html { redirect_to @vendedor, notice: 'Vendedor was successfully created.' }
+        format.html { redirect_to @vendedor, notice: 'Vendedor foi Cadastrado com Sucesso.' }
         format.json { render :show, status: :created, location: @vendedor }
       else
         format.html { render :new }

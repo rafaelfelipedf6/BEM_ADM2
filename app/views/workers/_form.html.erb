@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :nascimento %><br>
-    <%= f.date_select :nascimento %>
+    <%= f.date_field :nascimento %>
   </div>
   <div class="field">
     <%= f.label :cpf %><br>
@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :entrada %><br>
-    <%= f.date_select :entrada %>
+    <%= f.date_field :entrada %>
   </div>
   <div class="field">
     <%= f.label :salario %><br>
@@ -48,6 +48,6 @@
     <%= f.text_field :num %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Cadastrar" %>
   </div>
 <% end %>

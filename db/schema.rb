@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 20141126204859) do
     t.string   "nome"
     t.date     "nascimento"
     t.string   "cpf"
+    t.string   "telefone"
     t.date     "entrada"
     t.float    "salario"
     t.string   "cep"

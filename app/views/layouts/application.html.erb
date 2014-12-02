@@ -10,12 +10,21 @@
 	<div id="header">
 			<div class="menu_top">
 				<ul>
-				<% if user_signed_in? %>
-				  <li>Autenticado como <strong><%= current_user.cargo%></strong>.</li>
-					
-					  <li><%= link_to "Home", root_path, :class => 'navbar-link'  %></li>
-					  <li><%= link_to 'Editar Perfil', edit_user_registration_url, :class => 'navbar-link' %></li>
-					  <li><%= link_to "Sair", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>					  
+					<% if user_signed_in? %>
+						
+				  	  		<li>Autenticado como <strong><%= current_user.cargo%></strong>.</li>
+					  		<li><%= link_to "Home", root_path, :class => 'navbar-link'  %></li>
+					  	<% if can? :update, @user %>
+					  		<li><%= link_to 'Editar Perfil', edit_user_registration_url, :class => 'navbar-link' %></li>
+					  	<%end %>
+					  	<% if can? :update, @workers %>
+					  		<li><%= link_to 'Funcionários', workers_url, :class => 'navbar-link' %></li>
+					  	<%end %>
+					  	<% if can? :update, @products %>
+					  		<li><%= link_to 'Produtos', products_url, :class => 'navbar-link' %></li>
+					  	<%end %>
+					  		<li><%= link_to "Sair", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>					  
+						
 					<% else %>
 					  <li><%= link_to "Home", root_path, :class => 'navbar-link'  %></li>
 					  <li><%= link_to "Entrar", new_user_session_path, :class => 'navbar-link'  %></li>

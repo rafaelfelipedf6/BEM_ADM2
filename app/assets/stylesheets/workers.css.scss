@@ -1,3 +1,26 @@
 // Place all the styles related to the Workers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#workers, #products{
+    padding:10px;
+    background:#EEE;
+    border:1px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+#workers h1,h2,h3{
+    font-weight: normal;
+    text-align:center;
+}
+#content_workers ol{
+    padding:10px;
+    margin-left:15px;
+}
+#content_workers a{
+    color:#02208c;
+    text-decoration:none;
+}
+#content_workers a:hover{
+    color:#7795ef;
+}
